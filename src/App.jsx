@@ -14,6 +14,23 @@ export default function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const rootRef = useRef(null);
 
+  const handleNavClick = (e, hash) => {
+    e.preventDefault();
+    const lenis = window.__lenis;
+    if (lenis) {
+      lenis.scrollTo(hash, {
+        offset: 0,
+        duration: 1.4,
+        easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -12 * t))
+      });
+    } else {
+      const target = document.querySelector(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   // Loader
   useEffect(() => {
     let p = 0;
@@ -191,6 +208,7 @@ export default function App() {
               <a
                 key={item.name}
                 href={item.hash}
+                onClick={(e) => handleNavClick(e, item.hash)}
                 className="relative px-4 py-2 text-sm text-white/80 hover:text-white transition-colors"
               >
                 <span className="font-mono text-[10px] mr-1 text-white/40">0{idx + 1}</span>
@@ -574,7 +592,12 @@ export default function App() {
               { name: 'Journal', hash: '#journal' },
               { name: 'Contact', hash: '#contact' }
             ].map((item) => (
-              <a key={item.name} href={item.hash} className="block text-sm text-white/80 hover:text-orange-400 py-1">
+              <a 
+                key={item.name} 
+                href={item.hash} 
+                onClick={(e) => handleNavClick(e, item.hash)}
+                className="block text-sm text-white/80 hover:text-orange-400 py-1"
+              >
                 {item.name}
               </a>
             ))}
