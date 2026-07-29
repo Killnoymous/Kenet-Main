@@ -260,11 +260,10 @@ export default function App() {
           {Array.from({ length: 2 }).map((_, k) => (
             <div key={k} className="flex items-center gap-16">
               {[
-                'Cinematic Interaction', '★',
-                'Generative Brand Systems', '✦',
-                'Realtime 3D', '✧',
-                'Shader-driven Storytelling', '⌬',
-                'Immersive Product', '★'
+                'National Finalist — India Innovates 2026', '★',
+                'Pitched at FITT, IIT Delhi', '✦',
+                'Top 10 — Samsung Solve For Tomorrow', '⌬',
+                'Kenet Technologies', '✧'
               ].map((s, idx) => (
                 <span key={idx} className={idx % 2 === 1 ? 'text-orange-400' : 'text-white/85'}>
                   {s}
@@ -583,9 +582,18 @@ export default function App() {
           
           <div>
             <div className="font-mono text-[10px] tracking-[0.3em] text-white/40 mb-3">ELSEWHERE</div>
-            {['Instagram', 'Are.na', 'Vimeo', 'Read.cv', 'GitHub'].map((l) => (
-              <a key={l} href="#" className="block text-sm text-white/80 hover:text-orange-400 py-1">
-                {l}
+            {[
+              { name: 'Instagram', url: 'https://www.instagram.com/kenettechnologies.in/' },
+              { name: 'GitHub', url: 'https://github.com/Chaitanyasethi1' }
+            ].map((link) => (
+              <a 
+                key={link.name} 
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm text-white/80 hover:text-orange-400 py-1"
+              >
+                {link.name}
               </a>
             ))}
           </div>
