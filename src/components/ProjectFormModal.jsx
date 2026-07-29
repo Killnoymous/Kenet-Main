@@ -143,13 +143,14 @@ export default function ProjectFormModal({ isOpen, onClose }) {
                 <select 
                   value={formData.projectType}
                   onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                  className="w-full bg-[#0d0d0d] border border-white/10 focus:border-orange-400/80 rounded-2xl px-5 py-3.5 text-sm outline-none transition-all appearance-none cursor-pointer text-white"
+                  style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }}
+                  className="w-full border border-white/10 focus:border-orange-400/80 rounded-2xl px-5 py-3.5 text-sm outline-none transition-all cursor-pointer"
                 >
-                  <option value="WebGL / Interactive">WebGL / Interactive Experience</option>
-                  <option value="3D Product Configurator">3D Product Configurator</option>
-                  <option value="Brand Identity & Motion">Brand Identity & Motion</option>
-                  <option value="Generative Art / AI Systems">Generative Art / AI Systems</option>
-                  <option value="Immersive Web/App Design">Immersive Web/App Design</option>
+                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="WebGL / Interactive">WebGL / Interactive Experience</option>
+                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="3D Product Configurator">3D Product Configurator</option>
+                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="Brand Identity & Motion">Brand Identity & Motion</option>
+                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="Generative Art / AI Systems">Generative Art / AI Systems</option>
+                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="Immersive Web/App Design">Immersive Web/App Design</option>
                 </select>
               </div>
 
@@ -159,12 +160,13 @@ export default function ProjectFormModal({ isOpen, onClose }) {
                 <select 
                   value={formData.budget}
                   onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                  className="w-full bg-[#0d0d0d] border border-white/10 focus:border-orange-400/80 rounded-2xl px-5 py-3.5 text-sm outline-none transition-all appearance-none cursor-pointer text-white"
+                  style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }}
+                  className="w-full border border-white/10 focus:border-orange-400/80 rounded-2xl px-5 py-3.5 text-sm outline-none transition-all cursor-pointer"
                 >
-                  <option value="$15k - $30k">$15,000 – $30,000</option>
-                  <option value="$30k - $60k">$30,000 – $60,000</option>
-                  <option value="$60k - $100k">$60,000 – $100,000</option>
-                  <option value="$100k+">$100,000+</option>
+                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="$15k - $30k">$15,000 – $30,000</option>
+                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="$30k - $60k">$30,000 – $60,000</option>
+                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="$60k - $100k">$60,000 – $100,000</option>
+                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="$100k+">$100,000+</option>
                 </select>
               </div>
             </div>
