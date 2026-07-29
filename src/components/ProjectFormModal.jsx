@@ -11,7 +11,7 @@ export default function ProjectFormModal({ isOpen, onClose }) {
     name: '',
     email: '',
     projectType: 'WebGL / Interactive',
-    budget: '$15k - $30k',
+    budget: '₹1.5 Lakhs - ₹3 Lakhs',
     details: ''
   });
   
@@ -112,7 +112,7 @@ export default function ProjectFormModal({ isOpen, onClose }) {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+             <div className="grid md:grid-cols-2 gap-8">
               {/* Name Field */}
               <div className="space-y-3">
                 <label className="block text-[10px] font-mono tracking-[0.2em] text-white/40 uppercase">Your Name</label>
@@ -122,7 +122,8 @@ export default function ProjectFormModal({ isOpen, onClose }) {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="e.g. John Doe"
-                  className="w-full bg-white/[0.03] border border-white/10 hover:border-white/20 focus:border-orange-400/80 focus:bg-white/[0.05] rounded-2xl px-6 py-4 text-white placeholder:text-white/20 outline-none transition-all duration-300"
+                  style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }}
+                  className="w-full border border-white/10 hover:border-white/20 focus:border-orange-400/80 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 outline-none transition-all duration-300"
                 />
               </div>
 
@@ -135,7 +136,8 @@ export default function ProjectFormModal({ isOpen, onClose }) {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="e.g. john@example.com"
-                  className="w-full bg-white/[0.03] border border-white/10 hover:border-white/20 focus:border-orange-400/80 focus:bg-white/[0.05] rounded-2xl px-6 py-4 text-white placeholder:text-white/20 outline-none transition-all duration-300"
+                  style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }}
+                  className="w-full border border-white/10 hover:border-white/20 focus:border-orange-400/80 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 outline-none transition-all duration-300"
                 />
               </div>
             </div>
@@ -158,7 +160,7 @@ export default function ProjectFormModal({ isOpen, onClose }) {
                 </select>
               </div>
 
-              {/* Budget Range Selector */}
+               {/* Budget Range Selector */}
               <div className="space-y-3">
                 <label className="block text-[10px] font-mono tracking-[0.2em] text-white/40 uppercase">Budget Range</label>
                 <select 
@@ -167,10 +169,10 @@ export default function ProjectFormModal({ isOpen, onClose }) {
                   style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }}
                   className="w-full border border-white/10 focus:border-orange-400/80 rounded-2xl px-6 py-4 text-white outline-none transition-all duration-300 cursor-pointer"
                 >
-                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="$15k - $30k">$15,000 – $30,000</option>
-                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="$30k - $60k">$30,000 – $60,000</option>
-                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="$60k - $100k">$60,000 – $100,000</option>
-                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="$100k+">$100,000+</option>
+                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="₹1.5 Lakhs - ₹3 Lakhs">₹1,50,000 – ₹3,00,000 (1.5L - 3L)</option>
+                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="₹3 Lakhs - ₹6 Lakhs">₹3,00,000 – ₹6,00,000 (3L - 6L)</option>
+                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="₹6 Lakhs - ₹10 Lakhs">₹6,00,000 – ₹10,00,000 (6L - 10L)</option>
+                  <option style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }} value="₹10 Lakhs+">₹10,00,000+ (10L+)</option>
                 </select>
               </div>
             </div>
@@ -184,7 +186,8 @@ export default function ProjectFormModal({ isOpen, onClose }) {
                 value={formData.details}
                 onChange={(e) => setFormData({ ...formData, details: e.target.value })}
                 placeholder="Give us a brief description of what you have in mind, objectives, and parameters..."
-                className="w-full bg-white/[0.03] border border-white/10 hover:border-white/20 focus:border-orange-400/80 focus:bg-white/[0.05] rounded-2xl px-6 py-4 text-white placeholder:text-white/20 outline-none transition-all duration-300 resize-none leading-relaxed"
+                style={{ backgroundColor: '#0d0d0d', color: '#ffffff' }}
+                className="w-full border border-white/10 hover:border-white/20 focus:border-orange-400/80 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 outline-none transition-all duration-300 resize-none leading-relaxed"
               />
             </div>
 
