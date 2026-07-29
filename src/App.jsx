@@ -178,17 +178,23 @@ export default function App() {
         <div className="flex items-center justify-between px-6 md:px-10 py-6">
           <a href="#" className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-orange-400 shadow-[0_0_18px_#ff8b4a]"></span>
-            <span className="font-mono text-xs tracking-[0.35em] text-white/90">NOCTURNE / ⌬</span>
+            <span className="font-mono text-xs tracking-[0.35em] text-white/90">KENET TECHNOLOGIES / ⌬</span>
           </a>
           <nav className="hidden md:flex glass rounded-full px-2 py-2">
-            {['Index', 'Work', 'Studio', 'Journal', 'Contact'].map((l, idx) => (
+            {[
+              { name: 'Index', hash: '#index' },
+              { name: 'Work', hash: '#works' },
+              { name: 'Studio', hash: '#studio' },
+              { name: 'Journal', hash: '#journal' },
+              { name: 'Contact', hash: '#contact' }
+            ].map((item, idx) => (
               <a
-                key={l}
-                href={`#${l.toLowerCase()}`}
+                key={item.name}
+                href={item.hash}
                 className="relative px-4 py-2 text-sm text-white/80 hover:text-white transition-colors"
               >
                 <span className="font-mono text-[10px] mr-1 text-white/40">0{idx + 1}</span>
-                {l}
+                {item.name}
               </a>
             ))}
           </nav>
@@ -205,14 +211,14 @@ export default function App() {
         </div>
       </header>
 
-      <section className="relative min-h-screen flex flex-col justify-end z-10 px-6 md:px-10 pb-20 pt-40">
+      <section id="index" className="relative min-h-screen flex flex-col justify-end z-10 px-6 md:px-10 pb-20 pt-40">
         <div className="absolute top-1/2 -translate-y-1/2 right-6 md:right-10 vtext font-mono text-[10px] tracking-[0.4em] text-white/40">
-          NOCTURNE STUDIO / SHOWREEL 2025 — SCROLL TO EXPLORE
+          KENET TECHNOLOGIES / SHOWREEL 2026 — SCROLL TO EXPLORE
         </div>
         <div className="max-w-[1500px] mx-auto w-full">
           <div className="reveal-mask">
             <div data-reveal className="font-mono text-xs tracking-[0.4em] text-white/60">
-              ◆ INDEPENDENT IMMERSIVE STUDIO — EST. 2019
+              ◆ INDEPENDENT IMMERSIVE STUDIO — EST. 2026
             </div>
           </div>
           <h1 className="mt-8 md:mt-12 tracking-tightest leading-[0.86] font-medium">
@@ -231,7 +237,7 @@ export default function App() {
           <div className="mt-10 md:mt-14 grid md:grid-cols-3 gap-6 md:gap-10 items-end">
             <div className="reveal-mask md:col-span-2">
               <p data-reveal data-delay="0.7" className="reveal-line text-lg md:text-xl text-white/70 max-w-2xl">
-                Nocturne is an award-winning immersive studio designing cinematic WebGL experiences, generative brand universes and future-facing digital products for the world's most ambitious teams.
+                Kenet Technologies is an award-winning immersive studio designing cinematic WebGL experiences, generative brand universes and future-facing digital products for the world's most ambitious teams.
               </p>
             </div>
             <div className="flex md:justify-end gap-3">
@@ -472,6 +478,52 @@ export default function App() {
         </div>
       </section>
 
+      <section id="journal" className="relative z-10 py-40 px-6 md:px-10 border-t border-white/5 bg-black/30">
+        <div className="max-w-[1500px] mx-auto">
+          <div data-fade className="flex flex-col md:flex-row md:items-end justify-between mb-16">
+            <div>
+              <div className="font-mono text-xs tracking-[0.4em] text-white/50 mb-4">◇ JOURNAL / 005</div>
+              <h2 className="text-5xl md:text-7xl font-medium tracking-tightest">
+                Latest <span className="font-serif-i text-gradient">writings.</span>
+              </h2>
+            </div>
+            <p className="mt-4 md:mt-0 text-sm text-white/60 max-w-sm">
+              Our thoughts on design, technology, and the future of the interactive web.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                date: 'JULY 2026',
+                title: 'The Evolution of WebGL & WebGPU',
+                desc: 'Exploring the transition from WebGL to WebGPU and how it enables next-generation desktop experiences in the browser.'
+              },
+              {
+                date: 'JUNE 2026',
+                title: 'Designing with Shaders & Sensory Systems',
+                desc: 'A breakdown of how we build organic mathematical distortions and interactive particle fields.'
+              },
+              {
+                date: 'MAY 2026',
+                title: 'Optimizing React Three Fiber for Mobile',
+                desc: 'Practical techniques for keeping frame rates stable at 60fps across handheld devices.'
+              }
+            ].map((post, idx) => (
+              <div key={idx} data-fade className="glass rounded-3xl p-8 hover:border-orange-400/40 border border-white/10 transition-colors group cursor-pointer">
+                <span className="font-mono text-[10px] tracking-widest text-orange-400">{post.date}</span>
+                <h3 className="text-2xl font-medium mt-4 group-hover:text-orange-400 transition-colors">{post.title}</h3>
+                <p className="text-sm text-white/50 mt-4 leading-relaxed">{post.desc}</p>
+                <div className="mt-8 flex items-center gap-2 text-xs font-mono tracking-wider text-white/80 group-hover:text-white transition-colors">
+                  <span>READ ARTICLE</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="relative z-10 min-h-screen flex items-center justify-center px-6 md:px-10 py-40">
         <div className="max-w-5xl mx-auto text-center">
           <div data-fade className="font-mono text-xs tracking-[0.4em] text-white/50 mb-6 inline-flex items-center gap-2 justify-center">
@@ -489,7 +541,7 @@ export default function App() {
               onClick={() => setModalOpen(true)}
               className="bg-orange-400 text-black text-base font-medium px-10 py-5"
             >
-              <span>hello@nocturne.studio</span>
+              <span>hello@kenettechnologies.com</span>
               <ArrowUpRight className="w-5 h-5" />
             </MagneticButton>
             <MagneticButton 
@@ -507,18 +559,24 @@ export default function App() {
           <div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-orange-400 shadow-[0_0_18px_#ff8b4a]"></span>
-              <span className="font-mono text-xs tracking-[0.35em]">NOCTURNE / ⌬</span>
+              <span className="font-mono text-xs tracking-[0.35em]">KENET TECHNOLOGIES / ⌬</span>
             </div>
             <p className="mt-4 text-sm text-white/50 max-w-xs">
-              An independent immersive studio between London and Tokyo. Working globally, remotely, obsessively.
+              An independent immersive studio. Working globally, remotely, obsessively.
             </p>
           </div>
           
           <div>
             <div className="font-mono text-[10px] tracking-[0.3em] text-white/40 mb-3">SITEMAP</div>
-            {['Index', 'Work', 'Studio', 'Journal', 'Contact'].map((l) => (
-              <a key={l} href="#" className="block text-sm text-white/80 hover:text-orange-400 py-1">
-                {l}
+            {[
+              { name: 'Index', hash: '#index' },
+              { name: 'Work', hash: '#works' },
+              { name: 'Studio', hash: '#studio' },
+              { name: 'Journal', hash: '#journal' },
+              { name: 'Contact', hash: '#contact' }
+            ].map((item) => (
+              <a key={item.name} href={item.hash} className="block text-sm text-white/80 hover:text-orange-400 py-1">
+                {item.name}
               </a>
             ))}
           </div>
@@ -547,7 +605,7 @@ export default function App() {
         </div>
         
         <div className="border-t border-white/10 py-6 px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-2 font-mono text-[10px] tracking-[0.3em] text-white/40">
-          <span>© 2025 NOCTURNE STUDIO — ALL RIGHTS RESERVED</span>
+          <span>© 2026 KENET TECHNOLOGIES — ALL RIGHTS RESERVED</span>
           <span>DESIGN & CODE, IN-HOUSE</span>
           <span>V1.0.0 · WEBGL 2.0</span>
         </div>
