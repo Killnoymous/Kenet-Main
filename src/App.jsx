@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowUpRight, Play, Sparkles } from 'lucide-react';
-import CustomCursor from './components/CustomCursor';
 import SmoothScroll from './components/SmoothScroll';
 import MagneticButton from './components/MagneticButton';
 import Tilt3DCard from './components/Tilt3DCard';
@@ -159,7 +158,6 @@ export default function App() {
 
   return (
     <div ref={rootRef} className="noise relative min-h-screen bg-[#050505] text-white">
-      <CustomCursor />
       <SmoothScroll />
       
       <div className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black transition-opacity duration-700 ${loaded ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
