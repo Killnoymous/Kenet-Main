@@ -2304,7 +2304,7 @@ html, body {
 
 /* Marquee */
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.marquee-track { animation: marquee 40s linear infinite; }
+.marquee-track { animation: marquee 24s linear infinite; }
 
 /* Reveal split */
 .reveal-mask { overflow: hidden; display: inline-block; line-height: 1.05; }
