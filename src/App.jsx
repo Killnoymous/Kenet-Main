@@ -6,10 +6,12 @@ import SmoothScroll from './components/SmoothScroll';
 import MagneticButton from './components/MagneticButton';
 import Tilt3DCard from './components/Tilt3DCard';
 import HeroScene from './components/webgl/HeroScene';
+import ProjectFormModal from './components/ProjectFormModal';
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
   const rootRef = useRef(null);
 
   // Loader
@@ -192,7 +194,10 @@ export default function App() {
           </nav>
           <div className="flex items-center gap-3">
             <div className="hidden md:flex font-mono text-[10px] tracking-widest text-white/50">LDN · 51.50°N</div>
-            <MagneticButton className="bg-white text-black text-sm font-medium">
+            <MagneticButton 
+              onClick={() => setModalOpen(true)}
+              className="bg-white text-black text-sm font-medium"
+            >
               <span>Start a project</span>
               <ArrowUpRight className="w-4 h-4" />
             </MagneticButton>
@@ -480,11 +485,17 @@ export default function App() {
             Have a project worth losing sleep over? Send a brief, a whisper, or a wild idea. We reply within 24 hours.
           </p>
           <div data-fade className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <MagneticButton className="bg-orange-400 text-black text-base font-medium px-10 py-5">
+            <MagneticButton 
+              onClick={() => setModalOpen(true)}
+              className="bg-orange-400 text-black text-base font-medium px-10 py-5"
+            >
               <span>hello@nocturne.studio</span>
               <ArrowUpRight className="w-5 h-5" />
             </MagneticButton>
-            <MagneticButton className="glass-strong text-white text-base">
+            <MagneticButton 
+              onClick={() => setModalOpen(true)}
+              className="glass-strong text-white text-base"
+            >
               <span>Book an intro call</span>
             </MagneticButton>
           </div>
@@ -541,6 +552,7 @@ export default function App() {
           <span>V1.0.0 · WEBGL 2.0</span>
         </div>
       </footer>
+      <ProjectFormModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 }
