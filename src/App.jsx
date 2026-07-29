@@ -116,47 +116,47 @@ export default function App() {
   const works = [
     {
       n: '01',
-      tag: 'BRAND / WEBGL',
-      title: 'AURORA — Interactive Brand Universe',
-      client: 'Aurora Labs',
+      tag: 'AI / WEB APP',
+      title: 'NoteNetra — AI-driven Software Product',
+      client: 'Kenet Technologies',
       year: '2025',
       color: 'from-orange-400/70 to-rose-500/40'
     },
     {
       n: '02',
-      tag: 'CINEMATIC / SHADERS',
-      title: 'MERIDIAN — Real-time Concert Visuals',
-      client: 'Meridian Studio',
+      tag: 'MOBILE / FLUTTER',
+      title: 'Aakash Academics — Mobile App',
+      client: 'Aakash Academics',
       year: '2025',
       color: 'from-sky-400/70 to-indigo-500/40'
     },
     {
       n: '03',
-      tag: 'PRODUCT / 3D',
-      title: 'HELIX — Configurator & Storytelling',
-      client: 'Helix Motors',
+      tag: 'E-COMMERCE / WEB',
+      title: 'Luxury Retail E-commerce Platform',
+      client: 'Ethnic Wear Retailer',
       year: '2024',
       color: 'from-emerald-400/70 to-teal-500/40'
     },
     {
       n: '04',
-      tag: 'ART / GENERATIVE',
-      title: 'NOX — Generative Poster Machine',
-      client: 'Nox Editions',
+      tag: 'BRAND / WEBGL',
+      title: 'Athletic Apparel Label Pre-launch & Countdown',
+      client: 'Athletic Apparel',
       year: '2024',
       color: 'from-violet-400/70 to-fuchsia-500/40'
     },
     {
       n: '05',
-      tag: 'IMMERSIVE / XR',
-      title: 'ORBIT — Spatial Retail Experience',
-      client: 'Orbit Group',
+      tag: 'PORTFOLIO / CREATIVE',
+      title: 'Moncy Yohannan — Developer Portfolio',
+      client: 'Moncy Yohannan',
       year: '2024',
       color: 'from-amber-300/70 to-orange-500/40'
     }
   ];
 
-  const manifesto = 'We design cinematic digital worlds where light, motion and code collide. Every pixel is composed with intention — every frame, a moment worth remembering.';
+  const manifesto = 'Kenet Technologies is an AI solutions and product engineering company based in Rohini, Delhi. We partner with MSMEs, fintechs, and growing businesses to design, build, and ship software that actually moves the needle — not just software that looks good in a pitch deck.';
 
   return (
     <div ref={rootRef} className="noise relative min-h-screen bg-[#050505] text-white">
@@ -223,21 +223,21 @@ export default function App() {
           </div>
           <h1 className="mt-8 md:mt-12 tracking-tightest leading-[0.86] font-medium">
             <span className="block text-[16vw] md:text-[13vw] reveal-mask">
-              <span data-reveal data-delay="0.2" className="reveal-line">Worlds</span>
+              <span data-reveal data-delay="0.2" className="reveal-line">Software</span>
             </span>
             <span className="block text-[16vw] md:text-[13vw] reveal-mask">
               <span data-reveal data-delay="0.35" className="reveal-line">
-                <span className="font-serif-i text-gradient">between</span> light
+                <span className="font-serif-i text-gradient">that actually</span>
               </span>
             </span>
             <span className="block text-[16vw] md:text-[13vw] reveal-mask">
-              <span data-reveal data-delay="0.5" className="reveal-line">&amp; code.</span>
+              <span data-reveal data-delay="0.5" className="reveal-line">ships.</span>
             </span>
           </h1>
           <div className="mt-10 md:mt-14 grid md:grid-cols-3 gap-6 md:gap-10 items-end">
             <div className="reveal-mask md:col-span-2">
               <p data-reveal data-delay="0.7" className="reveal-line text-lg md:text-xl text-white/70 max-w-2xl">
-                Kenet Technologies is an award-winning immersive studio designing cinematic WebGL experiences, generative brand universes and future-facing digital products for the world's most ambitious teams.
+                Kenet Technologies partners with MSMEs, fintechs, and growing businesses to design, build, and launch AI-driven software — from custom engineering to our own products, NoteNetra and VisionPay.
               </p>
             </div>
             <div className="flex md:justify-end gap-3">
@@ -385,11 +385,11 @@ export default function App() {
             <div>
               <div className="font-mono text-xs tracking-[0.4em] text-white/50 mb-4">◇ APPROACH / 004</div>
               <h2 className="text-5xl md:text-7xl font-medium tracking-tightest">
-                Craft, <span className="font-serif-i text-gradient">obsessively</span>.
+                Our <span className="font-serif-i text-gradient">capabilities</span>.
               </h2>
             </div>
             <div className="hidden md:block text-sm text-white/60 max-w-sm">
-              A senior team of designers, engineers and directors — small enough to move fast, sharp enough to ship the impossible.
+              You're the subject-matter expert. We're the engineering expert. We sit at the table, understand your real goals, and build the right thing.
             </div>
           </div>
           
@@ -397,20 +397,20 @@ export default function App() {
             {[
               {
                 n: 'I',
-                t: 'Direction',
-                d: 'Positioning, concept, art direction, story spine. We start where strategy meets emotion.',
+                t: 'Design',
+                d: 'Beautiful, user-centric designs. We design interfaces around how your users actually think, not generic templates.',
                 shape: 'cube'
               },
               {
                 n: 'II',
-                t: 'Design',
-                d: 'Interface, motion, 3D. A single unified system across every surface, from hero to handheld.',
+                t: 'Engineering',
+                d: 'Robust, scalable solutions built with cutting-edge technologies. Fast, scalable web platforms built with modern frameworks and clean architecture.',
                 shape: 'pyramid'
               },
               {
                 n: 'III',
-                t: 'Engineering',
-                d: 'WebGL, shaders, real-time. Optimised for 60fps on the devices your audience actually uses.',
+                t: 'AI & Products',
+                d: 'Tailor-made software solutions engineered from the ground up to solve your unique business problems. Custom AI/ML integration and legacy system modernization.',
                 shape: 'octa'
               }
             ].map((s, idx) => (
@@ -530,11 +530,11 @@ export default function App() {
             <Sparkles className="w-3 h-3" />
             BOOKING Q3 · Q4 2025
           </div>
-          <h2 data-fade className="text-6xl md:text-[9vw] font-medium tracking-tightest leading-[0.9]">
-            Let's build<br /><span className="font-serif-i text-gradient">something rare.</span>
+          <h2 data-fade className="text-6xl md:text-[7vw] font-medium tracking-tightest leading-[0.9]">
+            Let's enhance your<br /><span className="font-serif-i text-gradient">excellent enterprise.</span>
           </h2>
           <p data-fade className="mt-8 text-lg text-white/60 max-w-2xl mx-auto">
-            Have a project worth losing sleep over? Send a brief, a whisper, or a wild idea. We reply within 24 hours.
+            For every prosperous enterprise, a proficient website is necessary, and we are the experts for it. Contact us now, let's kick-start!
           </p>
           <div data-fade className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <MagneticButton 
