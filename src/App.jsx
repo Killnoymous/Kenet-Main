@@ -229,7 +229,7 @@ export default function App() {
         </div>
       </header>
 
-      <section id="index" className="relative min-h-screen flex flex-col justify-start z-10 px-6 md:px-10 pb-12 pt-56">
+      <section id="index" className="relative min-h-screen flex flex-col justify-center z-10 px-6 md:px-10 pb-12 pt-24">
         <div className="absolute top-1/2 -translate-y-1/2 right-6 md:right-10 vtext font-mono text-[10px] tracking-[0.4em] text-white/40">
           KENET TECHNOLOGIES / SHOWREEL 2026 — SCROLL TO EXPLORE
         </div>
@@ -247,19 +247,6 @@ export default function App() {
               <span data-reveal data-delay="0.5" className="reveal-line">ships.</span>
             </span>
           </h1>
-          <div className="mt-10 md:mt-14 grid md:grid-cols-3 gap-6 md:gap-10 items-end">
-            <div className="reveal-mask md:col-span-2">
-              <p data-reveal data-delay="0.7" className="reveal-line text-lg md:text-xl text-white/70 max-w-2xl">
-                Kenet Technologies partners with MSMEs, fintechs, and growing businesses to design, build, and launch AI-driven software — from custom engineering to our own products, NoteNetra and VisionPay.
-              </p>
-            </div>
-            <div className="flex md:justify-end gap-3">
-              <MagneticButton className="glass-strong text-white text-sm">
-                <Play className="w-4 h-4" />
-                <span>Watch showreel</span>
-              </MagneticButton>
-            </div>
-          </div>
         </div>
         <div className="pointer-events-none absolute bottom-6 left-6 right-6 md:left-10 md:right-10 flex items-center justify-between font-mono text-[10px] tracking-[0.3em] text-white/40">
           <span>[ 001 / INDEX ]</span>
