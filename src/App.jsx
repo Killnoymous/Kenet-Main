@@ -229,16 +229,11 @@ export default function App() {
         </div>
       </header>
 
-      <section id="index" className="relative min-h-screen flex flex-col justify-center z-10 px-6 md:px-10 pb-12 pt-40">
+      <section id="index" className="relative min-h-screen flex flex-col justify-start z-10 px-6 md:px-10 pb-12 pt-56">
         <div className="absolute top-1/2 -translate-y-1/2 right-6 md:right-10 vtext font-mono text-[10px] tracking-[0.4em] text-white/40">
           KENET TECHNOLOGIES / SHOWREEL 2026 — SCROLL TO EXPLORE
         </div>
         <div className="max-w-[1500px] mx-auto w-full">
-          <div className="reveal-mask">
-            <div data-reveal className="font-mono text-xs tracking-[0.4em] text-white/60">
-              ◆ INDEPENDENT IMMERSIVE STUDIO — EST. 2026
-            </div>
-          </div>
           <h1 className="mt-8 md:mt-12 tracking-tightest leading-[0.86] font-medium">
             <span className="block text-[16vw] md:text-[13vw] reveal-mask">
               <span data-reveal data-delay="0.2" className="reveal-line">Software</span>
