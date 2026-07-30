@@ -229,7 +229,7 @@ export default function App() {
         </div>
       </header>
 
-      <section id="index" className="relative min-h-screen flex flex-col justify-end z-10 px-6 md:px-10 pb-20 pt-40">
+      <section id="index" className="relative min-h-screen flex flex-col justify-center z-10 px-6 md:px-10 pb-12 pt-40">
         <div className="absolute top-1/2 -translate-y-1/2 right-6 md:right-10 vtext font-mono text-[10px] tracking-[0.4em] text-white/40">
           KENET TECHNOLOGIES / SHOWREEL 2026 — SCROLL TO EXPLORE
         </div>
