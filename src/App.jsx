@@ -234,7 +234,7 @@ export default function App() {
           KENET TECHNOLOGIES / SHOWREEL 2026 — SCROLL TO EXPLORE
         </div>
         <div className="max-w-[1500px] mx-auto w-full">
-          <h1 className="mt-28 md:mt-36 tracking-tightest leading-[0.86] font-medium">
+          <h1 className="mt-16 md:mt-20 tracking-tightest leading-[0.86] font-medium">
             <span className="block text-[16vw] md:text-[13vw] reveal-mask">
               <span data-reveal data-delay="0.2" className="reveal-line">Software</span>
             </span>
