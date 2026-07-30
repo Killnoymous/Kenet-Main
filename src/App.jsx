@@ -255,7 +255,7 @@ export default function App() {
         </div>
       </section>
 
-      <section className="relative z-10 border-y border-white/10 bg-black/50 backdrop-blur-xl py-3.5 overflow-hidden">
+      <section className="relative z-10 bg-black/50 backdrop-blur-xl py-3.5 overflow-hidden">
         <div className="marquee-track flex gap-16 whitespace-nowrap font-serif-i text-4xl md:text-6xl">
           {Array.from({ length: 2 }).map((_, k) => (
             <div key={k} className="flex items-center gap-16">
