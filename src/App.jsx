@@ -229,12 +229,12 @@ export default function App() {
         </div>
       </header>
 
-      <section id="index" className="relative min-h-screen flex flex-col justify-center z-10 px-6 md:px-10 pb-12 pt-24">
+      <section id="index" className="relative min-h-screen flex flex-col justify-between z-10 px-6 md:px-10 pb-20 pt-48">
         <div className="absolute top-1/2 -translate-y-1/2 right-6 md:right-10 vtext font-mono text-[10px] tracking-[0.4em] text-white/40">
           KENET TECHNOLOGIES / SHOWREEL 2026 — SCROLL TO EXPLORE
         </div>
         <div className="max-w-[1500px] mx-auto w-full">
-          <h1 className="mt-8 md:mt-12 tracking-tightest leading-[0.86] font-medium">
+          <h1 className="mt-16 md:mt-20 tracking-tightest leading-[0.86] font-medium">
             <span className="block text-[16vw] md:text-[13vw] reveal-mask">
               <span data-reveal data-delay="0.2" className="reveal-line">Software</span>
             </span>
@@ -247,6 +247,19 @@ export default function App() {
               <span data-reveal data-delay="0.5" className="reveal-line">ships.</span>
             </span>
           </h1>
+          <div className="mt-24 md:mt-32 grid md:grid-cols-3 gap-6 md:gap-10 items-end">
+            <div className="reveal-mask md:col-span-2">
+              <p data-reveal data-delay="0.7" className="reveal-line text-lg md:text-xl text-white/70 max-w-2xl">
+                Kenet Technologies partners with MSMEs, fintechs, and growing businesses to design, build, and launch AI-driven software — from custom engineering to our own products, NoteNetra and VisionPay.
+              </p>
+            </div>
+            <div className="flex md:justify-end gap-3">
+              <MagneticButton className="glass-strong text-white text-sm">
+                <Play className="w-4 h-4" />
+                <span>Watch showreel</span>
+              </MagneticButton>
+            </div>
+          </div>
         </div>
         <div className="pointer-events-none absolute bottom-6 left-6 right-6 md:left-10 md:right-10 flex items-center justify-between font-mono text-[10px] tracking-[0.3em] text-white/40">
           <span>[ 001 / INDEX ]</span>
