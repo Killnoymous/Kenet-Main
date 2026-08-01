@@ -38,7 +38,11 @@ export default function ProjectFormModal({ isOpen, onClose }) {
     }
   }, [isOpen]);
 
-  const handleClose = () => {
+  const handleClose = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     gsap.to(modalRef.current, {
       y: 40,
       opacity: 0,
@@ -91,8 +95,9 @@ export default function ProjectFormModal({ isOpen, onClose }) {
 
         {/* Close Button */}
         <button 
+          type="button"
           onClick={handleClose}
-          className="absolute top-8 right-8 p-3 rounded-full border border-white/5 hover:border-white/20 bg-white/[0.02] hover:bg-white/[0.06] text-white/50 hover:text-white transition-all duration-300 z-10"
+          className="absolute top-8 right-8 p-3 rounded-full border border-white/5 hover:border-white/20 bg-white/[0.02] hover:bg-white/[0.06] text-white/50 hover:text-white transition-all duration-300 z-50"
         >
           <X className="w-5 h-5" />
         </button>
