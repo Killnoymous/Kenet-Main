@@ -201,7 +201,7 @@ export default function ProjectFormModal({ isOpen, onClose }) {
               <button 
                 type="button"
                 onClick={handleClose}
-                className="px-10 py-5 text-sm md:text-[15px] font-mono tracking-widest text-white/90 hover:text-white border border-white/10 hover:border-white/35 bg-white/[0.01] hover:bg-white/[0.04] rounded-full transition-all duration-300 uppercase"
+                className="px-10 py-4 text-sm md:text-[15px] font-mono tracking-widest text-white/90 hover:text-white border border-white/10 hover:border-white/35 bg-white/[0.01] hover:bg-white/[0.04] rounded-full transition-all duration-300 uppercase whitespace-nowrap"
               >
                 Cancel
               </button>
@@ -209,11 +209,11 @@ export default function ProjectFormModal({ isOpen, onClose }) {
               <button 
                 type="submit"
                 disabled={loading}
-                className="flex items-center justify-center gap-3.5 bg-orange-400 text-black hover:bg-orange-500 transition-all duration-300 font-mono tracking-widest uppercase px-12 py-5 rounded-full text-sm md:text-[15px] font-bold disabled:opacity-55 shadow-[0_4px_30px_rgba(255,139,74,0.3)] hover:shadow-[0_4px_45px_rgba(255,139,74,0.6)] min-w-[220px]"
+                className="flex items-center justify-center gap-3 bg-orange-400 text-black hover:bg-orange-500 transition-all duration-300 font-mono tracking-widest uppercase px-10 py-4 rounded-full text-sm md:text-[15px] font-bold disabled:opacity-55 shadow-[0_4px_30px_rgba(255,139,74,0.3)] hover:shadow-[0_4px_45px_rgba(255,139,74,0.6)] min-w-[260px] whitespace-nowrap"
               >
                 {loading ? (
                   <>
-                    <span className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></span>
+                    <span className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin"></span>
                     <span>Compiling...</span>
                   </>
                 ) : (
