@@ -201,7 +201,7 @@ export default function ProjectFormModal({ isOpen, onClose }) {
               <button 
                 type="button"
                 onClick={handleClose}
-                className="px-6 py-4 text-xs font-mono tracking-widest text-white/50 hover:text-white transition-colors uppercase"
+                className="px-8 py-4.5 text-xs font-mono tracking-widest text-white/80 hover:text-white border border-white/10 hover:border-white/30 bg-white/[0.01] hover:bg-white/[0.04] rounded-full transition-all duration-300 uppercase"
               >
                 Cancel
               </button>
@@ -209,7 +209,7 @@ export default function ProjectFormModal({ isOpen, onClose }) {
               <button 
                 type="submit"
                 disabled={loading}
-                className="flex items-center justify-center gap-3 bg-white text-black hover:bg-orange-400 hover:text-black transition-all duration-500 font-mono tracking-widest uppercase px-10 py-4.5 rounded-full text-xs font-bold disabled:opacity-55 shadow-[0_4px_30px_rgba(255,255,255,0.05)] hover:shadow-[0_4px_30px_rgba(255,139,74,0.3)] min-w-[200px]"
+                className="flex items-center justify-center gap-3 bg-orange-400 text-black hover:bg-orange-500 transition-all duration-300 font-mono tracking-widest uppercase px-10 py-4.5 rounded-full text-xs font-bold disabled:opacity-55 shadow-[0_4px_30px_rgba(255,139,74,0.25)] hover:shadow-[0_4px_45px_rgba(255,139,74,0.5)] min-w-[200px]"
               >
                 {loading ? (
                   <>
