@@ -7,11 +7,14 @@ import MagneticButton from './components/MagneticButton';
 import Tilt3DCard from './components/Tilt3DCard';
 import HeroScene from './components/webgl/HeroScene';
 import ProjectFormModal from './components/ProjectFormModal';
+import WhatsAppLeadModal from './components/WhatsAppLeadModal';
+import WhatsAppFloatButton from './components/WhatsAppFloatButton';
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
   const [progress, setProgress] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
+  const [whatsAppModalOpen, setWhatsAppModalOpen] = useState(false);
   const rootRef = useRef(null);
 
   const handleNavClick = (e, hash) => {
@@ -45,6 +48,16 @@ export default function App() {
     }, 90);
     return () => clearInterval(i);
   }, []);
+
+  // Auto-open WhatsApp popup for visitors (ideal for Instagram Ads)
+  useEffect(() => {
+    if (loaded) {
+      const timer = setTimeout(() => {
+        setWhatsAppModalOpen(true);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [loaded]);
 
   // GSAP scroll-driven storytelling
   useEffect(() => {
@@ -537,17 +550,18 @@ export default function App() {
           </p>
           <div data-fade className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <MagneticButton 
-              onClick={() => setModalOpen(true)}
-              className="bg-orange-400 text-black text-base font-medium px-10 py-5"
+              onClick={() => setWhatsAppModalOpen(true)}
+              className="bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white text-base font-bold px-10 py-5 shadow-[0_0_30px_rgba(37,211,102,0.4)] flex items-center gap-2"
             >
-              <span>hello@kenettechnologies.com</span>
+              <span>Chat on WhatsApp</span>
               <ArrowUpRight className="w-5 h-5" />
             </MagneticButton>
             <MagneticButton 
               onClick={() => setModalOpen(true)}
-              className="glass-strong text-white text-base"
+              className="bg-orange-400 text-black text-base font-medium px-10 py-5"
             >
-              <span>Book an intro call</span>
+              <span>Send Project Brief</span>
+              <ArrowUpRight className="w-5 h-5" />
             </MagneticButton>
           </div>
         </div>
@@ -589,7 +603,8 @@ export default function App() {
             <div className="font-mono text-[10px] tracking-[0.3em] text-white/40 mb-3">ELSEWHERE</div>
             {[
               { name: 'Instagram', url: 'https://www.instagram.com/kenettechnologies.in/' },
-              { name: 'GitHub', url: 'https://github.com/Chaitanyasethi1' }
+              { name: 'GitHub', url: 'https://github.com/Chaitanyasethi1' },
+              { name: 'WhatsApp', url: 'https://api.whatsapp.com/send/?phone=919906035405&text=Hey+Kenet+Technologies+can+I+get+more+info+about+this%3F&type=phone_number&app_absent=0' }
             ].map((link) => (
               <a 
                 key={link.name} 
@@ -624,6 +639,8 @@ export default function App() {
         </div>
       </footer>
       <ProjectFormModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+      <WhatsAppLeadModal isOpen={whatsAppModalOpen} onClose={() => setWhatsAppModalOpen(false)} />
+      <WhatsAppFloatButton onClick={() => setWhatsAppModalOpen(true)} />
     </div>
   );
 }
